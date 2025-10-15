@@ -1,5 +1,12 @@
 # uga_data_convt
 
+## Export the uga data from rosbag
+
+FYI:
+```shell
+https://github.com/shao-lab-uga/Vehicle_Data_-_Digital_Twin/tree/main/uga_dataset_tools
+```
+
 ## Download dataset for testing
 
 The original waymo motion dataset can be downloaded at [here](https://console.cloud.google.com/storage/browser/waymo_open_dataset_motion_v_1_1_0).
