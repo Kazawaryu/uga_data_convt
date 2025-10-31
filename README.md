@@ -2,10 +2,15 @@
 
 ## Export the uga data from rosbag
 
-FYI:
-```shell
-https://github.com/shao-lab-uga/Vehicle_Data_-_Digital_Twin/tree/main/uga_dataset_tools
-```
+A temp version export code is at `./export/test_ros_py.ipynb`.
+
+## Objectives
+
+Our goal is to develop a dataset tool that can be used by downstream task algorithms. The tool should support the following key functionalities:
+- **Data Alignment**: Since different sensors operate at varying sampling rates and their timestamps are not perfectly synchronized, the raw dataset contains redundant and misaligned data. The tool should align all sensor data temporally and spatially to ensure consistency.
+- **Index Construction**： The dataset is organized at the scene level, where each scene consists of n frames. Each frame includes multi-sensor data (e.g., camera, LiDAR, imu, gnss) as well as relative pose information. Within each frame, multiple instances (e.g., bounding boxes, relative positions, etc.) are recorded.
+The tool should build a series of tokens or indices that efficiently link and organize these hierarchical data elements, from scenes to frames to instances.
+- **Algorithm Compatibility**: Inspired by the Waymo dataset utilities, the tool should provide an interface compatible with algorithms designed for the Waymo format. At this stage, we only need to support motion-related algorithms for compatibility and evaluation purposes.
 
 ## Download dataset for testing
 
